@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/foekfont
+# catalog-date 2007-02-27 14:19:10 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-foekfont
 Version:	20070227
 Release:	1
@@ -46,6 +52,7 @@ places.
 %doc %{_texmfdistdir}/doc/latex/foekfont/README
 %doc %{_texmfdistdir}/doc/latex/foekfont/foekfont.pdf
 %doc %{_texmfdistdir}/doc/latex/foekfont/foekfont.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ places.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
