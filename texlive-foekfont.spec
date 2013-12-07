@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-foekfont
 Version:	20070227
-Release:	5
+Release:	6
 Summary:	The title font of the Mads Fok magazine
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/foekfont
