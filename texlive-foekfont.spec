@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	The title font of the Mads Fok magazine
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/foekfont
+URL:		https://www.ctan.org/tex-archive/fonts/foekfont
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/foekfont.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/foekfont.doc.r%{version}.tar.xz
