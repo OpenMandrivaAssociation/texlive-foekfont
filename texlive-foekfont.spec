@@ -12,9 +12,17 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/foekfont.r%{tl_r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/foekfont.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The bundle provides an Adobe Type 1 font, and LaTeX support for its use.
 The magazine web site shows the font in use in a few places.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from foekfont:
+Map foekfont.map
+TL_DROPIN_EOF
